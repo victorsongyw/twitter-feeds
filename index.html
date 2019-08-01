@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/0f2e3e8450.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="index.css">
+
+    <title>PizzaTwitterFeeds</title>
+	</head>
+
+	<body style="z-index: 250;">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a id="twitter" class="navbar-brand" href="#">
+          <img id="logo" src="./images/twitter-logo.png" width="40" class="d-inline-block align-top" alt="twitter-logo">
+          Twitter
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Friends</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Notifications</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Settings
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">My profile</a>
+                <a class="dropdown-item" href="#">Advanced settings</a>
+                <a class="dropdown-item" href="#">Log out</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-5">
+      <div class="row pt-4">
+
+        <div style="position:fixed; top: 80px; width: 250px;">
+          <div class="row bg-white mx-auto" id="left">
+            <div class="col">
+              <div class="row bg-dark" id="banner-bg" style="min-height: 100px;">
+                <img src="./images/penguin-banner.png" class="img-fluid" id="banner">
+              </div>
+              <div class="row mx-auto" style="height: 52px;">
+                <div class="col-4 pl-1"><img src="./images/penguin.png" class="img-fluid" id="penguin"></div>
+                <div class="col-8 pt-1">
+                  <div class="row mx-auto">
+                    <a style="text-decoration: underline;">Penguin Bird</a>
+                  </div>
+                  <div class="row mx-auto">
+                    <a style="font-size: 90%; font-style: italic; color: grey;">@penguin_bird</a>
+                  </div>
+                </div>
+              </div>
+              <div class="row pl-2 pr-3 pt-1">
+                <div class="col-4 mx-auto">
+                  <strong><a style="color: grey; font-size: 85%;">Tweets</a></strong>
+                  <strong><a style="color: #4AB3F4;">1279</a></strong>
+                </div>
+                <div class="col-4 mx-auto">
+                  <strong><a style="color: grey; font-size: 85%;">Following</a></strong>
+                  <strong><a style="color: #4AB3F4;">155</a></strong>
+                </div>
+                <div class="col-4 mx-auto">
+                  <strong><a style="color: grey; font-size: 85%;">Followers</a></strong>
+                  <strong><a style="color: #4AB3F4;">109</a></strong>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+          </div>
+        </div>
+        <div class="col-6 m-2 p-3 bg-white" style="margin-left: 270px !important;">
+          <button id="stop" type="button" class="btn btn-outline-primary">Stop</button>
+          <button id="restart" type="button" class="btn btn-outline-primary">Restart</button>
+          <button id="switch" type="button" class="btn btn-outline-primary">Show Tags</button>
+          <p></p>
+          <div class="input-group mb-3" id="commentInput" style="display: none;">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary" type="button" id="publish">Add</button>
+            </div>
+            <input type="text" id="input" class="form-control" placeholder="New Tag" aria-label="Comment">
+          </div>
+          <p></p>
+          <p class="pt-1" id="status">Showing pizza-related TwitterFeeds...</p>
+          <div class="progress mb-1">
+            <div id="bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0/5</div>
+          </div>
+          <ul id="tweets" class="list-group list-group-flush"></ul>
+        </div>
+        <div class="col d-none d-lg-inline-block m-2">
+          <div class="row bg-white p-3" id="right">
+            <div class="col">
+              <div class="row">
+                <h6><strong>Who to follow</strong></h6>
+              </div>
+              <div class="row pt-2">
+                <div class="col-2 p-0">
+                  <img src="./images/penguin.png" class="img-fluid">
+                </div>
+                <div class="col-10">
+                  <div class="row pl-2 mb-1">
+                    <strong style="font-size: 85%;">Big Penguin</strong><a class="pl-1" style="font-size: 85%; color: grey; font-style: italic;">@bigpenguin</a>
+                  </div>
+                  <button id="follow" type="button" class="btn btn-sm btn-outline-primary">Follow</button>
+                </div>
+              </div>
+              <div class="row">
+
+              </div>
+            </div>
+          </div>
+          <div class="row">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Comment layer -->
+    <div id="cover" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 250; background-color: rgba(228, 236, 241, 0.6);display: none;"></div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Javascript code -->
+    <script src="index.js"></script>
+  </body>
+
+</html>

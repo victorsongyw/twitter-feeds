@@ -1,0 +1,54 @@
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 0;
+  background-color: #e6ecf0;
+}
+
+header {
+  position: fixed;
+  top: 0; right: 0; left: 0;
+  z-index: 100;
+}
+
+#twitter { color: #4AB3F4; }
+
+#logo {
+  justify-content: flex-end;
+  width: 40px;
+}
+
+#left {
+  height: 220px;
+}
+
+#banner {
+  position: relative;
+  left: 50px;
+  top: 0px;
+  width: 60%;
+}
+
+
+#penguin {
+  background-color: grey;
+  background-blend-mode: multiply;
+  transform: translateY(-1em);
+  border-radius: 50%;
+  border: solid white 2px;
+  left: 20px;
+  top: 85px;
+  min-width: 120%;
+}
+
+#right { height: 160px; }
+
+.not { font-size: 90%; }
+
+.twitter-text { font-size: 120%; }
+
+
+
+
+
+
