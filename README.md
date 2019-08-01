@@ -10,7 +10,7 @@ Prerequiesites:
 	+ python3
 	+ pip3
 
-Run
+Run:
 		Run "python3 cs132_twitterfeed.py" in terminal
 		Wait for the line "[OK] Server is listening to http://localhost:8082/feed/start"
     Run "python -m SimpleHTTPServer 8080 (or any other port number)"
